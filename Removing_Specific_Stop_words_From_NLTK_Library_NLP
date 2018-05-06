@@ -1,0 +1,4 @@
+from nltk.corpus import stopwords
+stopwords_removed = stopwords.words('english')
+stopwords_removed.remove('not')
+stopwords_removed.remove('no')

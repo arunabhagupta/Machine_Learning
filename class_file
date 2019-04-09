@@ -1,0 +1,60 @@
+class Kettle(object):
+    
+    power_source = "electricity"
+    
+    def __init__(self, make, price): # constructor - init method in python
+        self.make = make
+        self.price = price
+        self.on = False
+        
+    def switch_on(self):
+        self.on = True
+        
+pegion = Kettle("Pegion",8.99) #pegion is the instance of the kettle class and pegion is an object of type Kettle
+print(pegion.make)
+print(pegion.price)
+
+pegion.price = 10.99
+print(pegion.price)
+
+orpat = Kettle("Orpat", 12.99)
+print(orpat.make)
+print(orpat.price)
+
+print("Models:\n {} = {},\n {} = {}".format(pegion.make,pegion.price,orpat.make,orpat.price))
+
+print("Models:\n {0.make} = {0.price},\n {1.make} = {1.price}".format(orpat,pegion))
+
+"""
+Class: template for creating objects. All objects created using the same class will have the same characteristics.
+Object: an instance of a class.
+Instantiate: create an instance of a class.
+Method: a function defined in a class.
+Attribute: a variable bound to an instance of a class.
+"""
+
+print(pegion.on)
+pegion.switch_on()
+print(pegion.on)
+
+Kettle.switch_on(orpat)
+print(orpat.on)
+
+print("*" * 70)
+
+pegion.power = 1.5
+print(pegion.power)
+# print(orpat.power)
+
+print("Switch to Power Source")
+Kettle.power_source = "Atomic"
+
+print(Kettle.power_source)
+print(pegion.power_source)
+print(orpat.power_source)
+
+print(Kettle.__dict__)
+print(pegion.__dict__)
+print(orpat.__dict__)
+
+
